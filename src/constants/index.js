@@ -17,12 +17,22 @@ import {
   docker,
   meta,
   starbucks,
+  sintel,
+  remay,
+  fincs,
+  routeasy,
+  martonis,
+  ax4b,
   tesla,
   shopify,
+  portfolio2d,
   carrent,
   jobit,
   tripguide,
   threejs,
+  threejs2,
+  reactjsportfolio,
+  mmsclandingpage,
 } from "../assets";
 
 export const navLinks = [
@@ -46,7 +56,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Fronted Developer",
     icon: mobile,
   },
   {
@@ -80,10 +90,10 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -98,73 +108,87 @@ const technologies = [
   },
   {
     name: "Three JS",
-    icon: threejs,
+    icon: threejs2,
   },
   {
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Intern",
+    company_name: "Sintel S.A.",
+    icon: sintel,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "January 2018 - December 2019",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I joined as a support intern where I worked checking EDI digital files, business rule application compliance of Sintel systems, opening and analyzing calls/tickets",
+      "At the end of 2018 I changed my position to Rollout intern where I applied settings in the internal system from Sintel and also analyzes file flow through the platform (Database and Delphi applications)",
+      "In May I started working in the development area and worked with SQL, Linux, JavaScript, AngularJS, Protractor, Bootstrap, HTML5, CSS technologies and C#(Csharp).",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Full Stack Junior Developer",
+    company_name: "Remay ",
+    icon: remay,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "January 2020 - March 2020",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developer of applications in C#, JavaScript (BootStrap and Jquery), HTML, CSS and SQL Server for Bradesco's internal applications.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Full Stack Developer",
+    company_name: "FINCS - Soluções e Componentes em Finanças",
+    icon: fincs,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "May 2020 - August 2020",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Development and maintenance of web applications in ASP.NET, C# and SQL Server.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Full Stack Developer",
+    company_name: "Martoni's Sistemas Inteligentes",
+    icon: martonis,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "September 2020 - March 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Technologies: TypeScript, Reactjs, Nodejs, Mongodb and Oracle Data Base.",
+      "The web applications were focused on monitoring the data that was provided by PRODATA partner.",
+      "'Procedures' in Oracle were normal to perform on a daily basis.",
+    ],
+  },
+  {
+    title: "Full Stack Developer",
+    company_name: "RoutEasy ",
+    icon: routeasy,
+    iconBg: "#E6DEDD",
+    date: "April 2021 - May 2022",
+    points: [
+      "Application development in MEAN Stack.",
+      "Routeeasy is focused on the logistics industry.",
+      "MEAN Stack == Mongodb, ExpressJS, AngularJS e NodeJS.",
+    ],
+  },
+  {
+    title: "Full Stack Developer",
+    company_name: "AX4B Enterprise Solutions ",
+    icon: ax4b,
+    iconBg: "#E6DEDD",
+    date: "June 2022 - November 2022",
+    points: [
+      "Internal CRM development that uses HTML5, CSS3, JavaScript, Bootstrap, jQuery, C# and SQL Server.",
     ],
   },
 ];
@@ -198,67 +222,71 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "2D Portfolio",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "2D portfolio with Kaboomjs, it was made to look like zelda old game of Ninntendo. Can tap/click around to see information about myself. The map is a representation of my house.",
     tags: [
       {
-        name: "react",
+        name: "Reactjs",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "vite",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Kaboomjs",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: portfolio2d,
+    source_code_link: "https://github.com/Marcel-MSC/2D-portfolio",
   },
   {
-    name: "Job IT",
+    name: "ReactJS Resume",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Its a portfolio to show some project, information and contact.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
+        name: "tailwind",
+        color: "blue-text-gradient",
       },
       {
         name: "scss",
         color: "pink-text-gradient",
       },
+      {
+        name: "gitconnected",
+        color: "green-text-gradient",
+      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: reactjsportfolio,
+    source_code_link: "github.com/Marcel-MSC/portfolio-marcelo",
   },
   {
-    name: "Trip Guide",
+    name: "MMSC Fake Company",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "This website is made with an experimental starter built using gatsby-theme-codebushi, a theme which uses Tailwind CSS.",
     tags: [
       {
-        name: "nextjs",
+        name: "ReactJS",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Gatsby",
         color: "green-text-gradient",
       },
       {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "potcss",
+        color: "red-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: mmsclandingpage,
+    source_code_link: "https://github.com/Marcel-MSC/mmsc-landing-page",
   },
 ];
 
