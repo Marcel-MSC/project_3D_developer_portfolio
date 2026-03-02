@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoM3-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#915EFF" />
+      <stop offset="50%" stop-color="#6E56CF" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <filter id="logoM3-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="black" flood-opacity="0.45" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#020617" />
+  <g filter="url(#logoM3-shadow)">
+    <path
+      d="M128 384V152c0-26.5 21.5-48 48-48h16c20.4 0 36.9 10.7 46.2 29.4L256 176l17.8-42.6C283.1 114.7 299.6 104 320 104h16c26.5 0 48 21.5 48 48v232h-64V192l-40 96h-48l-40-96v192h-64Z"
+      fill="url(#logoM3-gradient)"
+    />
+  </g>
+</svg>
+

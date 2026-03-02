@@ -1,15 +1,19 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Canvas, useLoader } from "@react-three/fiber";
+import { OrbitControls, Preload } from "@react-three/drei";
 
+import GLTFLoaderWithDraco from "../../lib/gltfLoader";
 import CanvasLoader from "../Loader";
 
+const DESKTOP_PC_URL = "./desktop_pc/scene.gltf";
+useLoader.preload(GLTFLoaderWithDraco, DESKTOP_PC_URL);
+
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useLoader(GLTFLoaderWithDraco, DESKTOP_PC_URL);
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -22,7 +26,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        position={isMobile ? [0, -4, -2.2] : [0, -4.5, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -55,10 +59,10 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
-      dpr={[1, 2]}
-      camera={{ position: [30, 6, 10], fov: 25 }}
+      dpr={[1, 1.5]}
+      camera={{ position: [30, 8, 10], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

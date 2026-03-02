@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import logoM from "./logoM.svg";
 import logoM2 from "./logoM2.svg";
+import logoM3 from "./logoM3.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -47,6 +48,7 @@ export {
   logo,
   logoM,
   logoM2,
+  logoM3,
   backend,
   creator,
   mobile,
