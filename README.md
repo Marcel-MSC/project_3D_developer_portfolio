@@ -1,3 +1,134 @@
+# Marcelo’s 3D Developer Portfolio
+
+An interactive 3D portfolio built with React, Vite, Three.js and Tailwind CSS, showcasing my experience as a full‑stack JavaScript developer.
+
+The goal of this project is to present my skills and projects in a way that feels modern, performant and memorable, while still being production‑ready and easy to maintain.
+
+---
+
+## 🚀 Highlights
+
+- **3D Hero Section** with a desktop model rendered via React Three Fiber and Drei.
+- **3D Skills Grid** showing tech stack icons as orbiting 3D balls.
+- **Projects section** with animated cards and links to code/live demos.
+- **Experience timeline** for professional history.
+- **Contact section with 3D Earth** and a working email form.
+- **Fully responsive layout** for mobile, tablet and desktop.
+
+---
+
+## 🧠 What I Implemented & Improved
+
+### 3D & Performance
+
+- Shared 3D geometries and materials in the skills section to reduce GPU/memory overhead.
+- Used `frameloop="demand"` where possible so canvases only render when needed.
+- Capped device pixel ratio to keep frame rates stable on high‑DPI screens.
+- Lazy‑loaded heavy 3D sections (Earth, skills) using an intersection observer wrapper so they only mount when visible.
+
+### Contact Experience
+
+- Integrated **EmailJS** with a free **Gmail** provider using Vite environment variables.
+- Replaced blocking `alert()`s with inline **success/error banners** that match the site’s styling.
+- Automatically scroll the contact card into view after a send, so users always see feedback.
+
+### UI & Branding
+
+- Designed custom **M logos** (`logoM2`, `logoM3`) using the same purple/blue palette as the site.
+- Updated the **navbar** to use the new logo and improved the hero layout so the intro text and 3D computer sit side‑by‑side on larger screens while staying clean on mobile.
+
+### Deployment & Config
+
+- Added a `netlify.toml` with:
+  - `npm run build` as the build command.
+  - `dist` as the publish directory.
+  - A SPA redirect (`/* → /index.html`) for React Router.
+  - Node 20.x to satisfy Vite 7’s requirements.
+- Documented and configured EmailJS environment variables on Netlify, and tuned secrets scanning so public Vite vars (`VITE_EMAILJS_*`) don’t break the build.
+
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend**: React 18, Vite
+- **3D**: Three.js, React Three Fiber, @react-three/drei
+- **Styling**: Tailwind CSS, Framer Motion
+- **Contact**: EmailJS (Gmail provider)
+- **Deployment**: Netlify
+
+---
+
+## 🧩 Running the Project Locally
+
+### 1. Prerequisites
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (v20.x recommended)
+- [npm](https://www.npmjs.com/)
+
+### 2. Clone & Install
+
+```bash
+git clone <your-repo-url>.git
+cd project_3D_developer_portfolio
+npm install
+```
+
+### 3. Environment Variables (EmailJS)
+
+Create a `.env` file in the project root:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_emailjs_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+```
+
+- These values come from the [EmailJS dashboard](https://www.emailjs.com/).  
+- Vite requires the `VITE_` prefix for variables exposed to the browser.
+
+### 4. Start Dev Server
+
+```bash
+npm run dev
+```
+
+Then open `http://localhost:5173` in your browser.
+
+### 5. Production Build
+
+```bash
+npm run build
+```
+
+The optimized build will be generated in the `dist` folder.
+
+---
+
+## ☁️ Deploying on Netlify
+
+You can deploy directly from this repo using the included `netlify.toml`.
+
+1. Connect the GitHub repository to Netlify.
+2. In **Site settings → Build & deploy → Environment**, add:
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
+3. Trigger a deploy. Netlify will:
+   - Run `npm run build`.
+   - Serve the `dist` folder.
+   - Apply the SPA redirect so React Router works on direct URL hits.
+
+---
+
+## 💡 Notes & Future Ideas
+
+- Experiment with code‑splitting and lazy‑loading for the biggest sections in the main bundle.
+- Add more projects and case studies with richer descriptions and screenshots.
+- Integrate simple analytics to understand how recruiters and visitors interact with the 3D sections.
+
+If you have feedback or ideas to push this portfolio further, I’d be happy to hear from you.
+
 <div align="center">
   <br />
     <a href="https://youtu.be/0fYi8SGA20k?feature=shared" target="_blank">
@@ -38,7 +169,13 @@ If you prefer visual learning, this is the perfect resource for you. Follow our 
 
 ## <a name="introduction">🤖 Introduction</a>
 
-By developing this project, you will gain hands-on experience in crafting immersive web experiences, mastering 3D libraries, and implementing engaging animations. The combination of creativity and technical skills showcased in this project serves as an excellent learning opportunity for developers seeking to enhance their portfolio and captivate users with cutting-edge web design.
+This project is a production‑ready, interactive 3D developer portfolio built with React, Vite, Three.js and Tailwind CSS.  
+It started from the JavaScript Mastery tutorial and was then extended with:
+
+- Better performance in 3D scenes (shared geometry/materials, `frameloop="demand"`, DPR caps).
+- A more polished contact experience powered by EmailJS and a free Gmail provider.
+- Improved branding with a custom “M” logo and updated hero layout.
+- A Netlify deployment setup, including SPA redirects and environment‑based configuration.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
 
@@ -50,9 +187,10 @@ If you're getting started and need assistance or face any bugs, join our active 
 - Three.js
 - React Three Fiber
 - React Three Drei
-- Email JS
+- EmailJS
 - Vite
 - Tailwind CSS
+- Netlify (deployment)
 
 ## <a name="features">🔋 Features</a>
 
@@ -72,6 +210,10 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Responsive Design**: Ensures optimal display and functionality across all devices.
 
+👉 **3D Performance Optimizations**: Uses shared geometries and materials, demand‑based render loops, DPR caps and lazy loading so the portfolio feels smooth even on mid‑range devices.
+
+👉 **Enhanced Contact UX**: Inline success/error feedback that matches the UI and smooth scrolling to the contact card after sending a message.
+
 and many more, including code architecture and reusability 
 
 ## <a name="quick-start">🤸 Quick Start</a>
@@ -88,8 +230,10 @@ Make sure you have the following installed on your machine:
 
 **Cloning the Repository**
 
+Clone **your** fork of this repo:
+
 ```bash
-git clone git@github.com:adrianhajdin/project_3D_developer_portfolio.git
+git clone <your-repo-url>.git
 cd project_3D_developer_portfolio
 ```
 
@@ -103,12 +247,12 @@ npm install
 
 **Set Up Environment Variables**
 
-Create a new file named `.env` in the root of your project and add the following content:
+Create a new file named `.env` in the root of your project and add the following content (Vite requires the `VITE_` prefix for client‑side env vars):
 
 ```env
-REACT_APP_EMAILJS_USERID=your_emailjs_user_id
-REACT_APP_EMAILJS_TEMPLATEID=your_emailjs_template_id
-REACT_APP_EMAILJS_RECEIVERID=your_emailjs_receiver_id
+VITE_EMAILJS_SERVICE_ID=your_emailjs_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 ```
 
 Replace the placeholder values with your actual EmailJS credentials. You can obtain these credentials by signing up on the [EmailJS website](https://www.emailjs.com/).
@@ -120,6 +264,21 @@ npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
+
+**Production Build**
+
+```bash
+npm run build
+```
+
+This will generate an optimized production build in the `dist` folder.
+
+If you want to deploy on **Netlify**, you can use the included `netlify.toml` file:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+Make sure to also define the three EmailJS env vars (`VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, `VITE_EMAILJS_PUBLIC_KEY`) in your Netlify site settings.
 
 ## <a name="snippets">🕸️ Snippets</a>
 
